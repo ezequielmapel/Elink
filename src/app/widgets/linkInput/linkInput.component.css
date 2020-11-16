@@ -1,0 +1,20 @@
+.inputLink{
+    background-color: rgba(120, 120, 120, .8);
+    border-radius: 8px;
+    height: 38px;
+
+}
+
+.inputLink>input{
+    border: none;
+    color: white;
+    background-color: transparent;
+    width: 90%;
+    float: right;
+    height: 38px;
+    padding-left: 15px !important;
+}
+
+::placeholder{
+    color:#ffffffaa;
+}

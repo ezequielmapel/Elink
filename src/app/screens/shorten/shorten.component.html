@@ -1,0 +1,42 @@
+<div style="height: 15px"></div>
+<div class="row">
+  <div class="col-lg-12" style="text-align: center;">
+    {{ textDescription }}
+  </div>
+</div>
+<div style="height: 25px">
+</div>
+<div class="row shorten">
+  <div class="col-lg-10 inputer">
+    <input #linkOlder type="text" [placeholder]="placeholder" (keyup)="validate('linkOlder', linkOlder.value)" >
+  </div>
+  <div class="col-lg-1">
+      <div class="status" [@wasAnimated]="wasAnimated">
+    </div>
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+
+<div style="height: 40px"></div>
+
+
+<div class="row shorten">
+  <div class="col-lg-10 inputer">
+    <input #linkNew type="text" [placeholder]="placeholderLinkNew" (keyup)="validate('linkNew', linkNew.value)">
+  </div>
+  <div class="col-lg-1">
+    <div class="status" [@wasAnimated]="validatorLinkNew" >
+    </div>
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+<div style="height: 25px">
+</div>
+<div class="row">
+  <div class="col-lg-2" >
+    <div class="button" (mouseenter)="mouse(true)" (mouseleave)="mouse(false)" (click)="toggle()">
+      <img src="assets/images/icons/send.svg" #sender>
+    </div>
+  </div>
+</div>
+<div style="height: 5px"></div>

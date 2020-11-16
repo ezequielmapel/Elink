@@ -1,0 +1,26 @@
+<div class="row" #modal [hidden]="hiddenModal==='true'">
+  <div  class="mmodal" [ngClass]="{ 'col-lg-4':cols==4 , 'col-lg-6':cols==6, 'col-lg-8':cols==8 }">
+    <div class="row" style="height: 20px;">
+      <div class="col-lg-11"></div>
+      <div class="col-lg-1 closeModal"
+           (mouseenter)="mouse('enter')"
+           (mouseleave)="mouse('leave')"
+           (click)="mouseClick()" >
+        <img src="assets/images/icons/x.svg" #closeButtonModal>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="row">
+      <div class="col-lg-12 titleIcon">
+        <img [src]="icon">
+      </div>
+    </div>
+
+    <!-- Ent Title -->
+
+    <!-- Content -->
+    <ng-content></ng-content>
+    <!-- End Content -->
+  </div>
+</div>

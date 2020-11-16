@@ -1,0 +1,26 @@
+.inputSender {
+  position: fixed;
+  left: 10%;
+  bottom: 23px;
+  width: 80%;
+}
+
+.inputLink {
+  width: 100%;
+  background-color: rgba(120, 120, 120, .8);
+  border-radius: 8px;
+  height: 38px;
+
+}
+
+.inputLink > input {
+  border: none;
+  color: white;
+  background-color: transparent;
+
+  height: 38px;
+}
+
+::placeholder {
+  color: #ffffffaa;
+}

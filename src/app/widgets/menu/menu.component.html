@@ -1,0 +1,18 @@
+<div class="row" class="menu">
+    <div class="col-sm-2" class="brand">
+        <!-- <img src="[brand]" > -->
+        <p>{{ brand }}</p>
+    </div>
+    <div class="col-sm-7"></div>
+    <div class="col-sm-3">
+        <nav>
+            <ul>
+                <li *ngFor="let action of menuActions">
+                    <a [routerLink]="['/'+action.href]" >
+                        {{ action.text }}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

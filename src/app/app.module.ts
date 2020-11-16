@@ -3,16 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { ScreenRoutesModule } from './screens/screens-routing.module';
+import { WidgetsModule } from './widgets/widgets.module';
+import { ScreenModule } from './screens/screen.module';
+import { RouterModule } from '@angular/router';
+import { ChatModule } from "./chat/chat.module";
+import { DataService } from "./dataService.service";
+import {ModalService} from "./chat/shared/modal.service";
+import {SharedModule} from "./shared/shared.module";
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule,
+    AppRoutingModule,
+    WidgetsModule,
+    ScreenRoutesModule,
+    ChatModule,
+    ScreenModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [
+    DataService,
+  ],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

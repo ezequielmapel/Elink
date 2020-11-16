@@ -1,0 +1,14 @@
+<!-- <widgets-linkinput></widgets-linkinput> -->
+<chat-room></chat-room>
+
+<widgets-modal #modalroot
+               [hiddenModal]="hidden"
+               title=""
+               icon="assets/images/icons/scissors.svg"
+               (close)="hiddenModal($event)">
+  <index-shorten></index-shorten>
+</widgets-modal>
+
+<widgets-floatButton (clickEmit)="hiddenModal($event)"
+                     icon="assets/images/icons/scissors.svg"
+></widgets-floatButton>

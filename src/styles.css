@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+*, body{
+    padding:0px !important;
+    margin: 0px auto !important;
+    max-width: 100%;
+    color: #bbb;
+}
+
+input{
+    outline: none;
+}
+.background::before{
+    content: "";
+    background-color: beige;
+    width: 100%;
+    height: 90vh;
+    background-image: url("/assets/images/background_index.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    display: block;
+    position: absolute;
+    top:45px;
+    left: 0;
+    z-index: -10;
+}

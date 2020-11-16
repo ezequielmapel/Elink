@@ -1,0 +1,17 @@
+<div class="row" style="word-break: break-word">
+    <div class="col-sm-6">
+        <div class="imageUser" [ngClass]="{'messageGray':me.toString() === 'true', 'messagePurple':me.toString() != 'true'}">
+            <ng-content *ngIf="imageUrl != ''; then thenBlock else elseBlock"></ng-content>
+            <ng-template #thenBlock><img  [src]="imageUrl" ></ng-template>
+        <ng-template #elseBlock><img  src="/assets/images/default_user.png"></ng-template>
+        </div>
+        <div class="messageText" [ngClass]="{'messageGray':me.toString() === 'true', 'messagePurple':me.toString() != 'true'}">
+            {{ message }}
+        </div>
+        <div class="author">
+            <p> {{ author }}</p> -
+            <p class="hour">{{ hour }}</p>
+        </div>
+    </div>
+    <div class="col-sm-6"></div>
+</div>
